@@ -26,6 +26,9 @@ namespace Shop.Data
                 .HasKey(b => b.id)
                 .HasName("PrimaryKey_CarId");
 
+            modelBuilder.Entity<Car>()
+                .HasOne<Category>(s => s.Category);
+
             modelBuilder.Entity<Category>()
                 .HasKey(b => b.id)
                 .HasName("PrimaryKey_CategoryId");

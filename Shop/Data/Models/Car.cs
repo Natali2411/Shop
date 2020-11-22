@@ -29,6 +29,7 @@ namespace Shop.Data.Models
         [Required]
         public int categoryID;
         [NotMapped]
+        [Required]
         public virtual Category Category { get; set; }
     }
 }
